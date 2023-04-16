@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="translatorapp.MainPage">
+  <StackLayout BackgroundColor="#3f3f3f" >
+        <Frame BackgroundColor="#3f3f3f"  Padding="15" CornerRadius="7">
+            <StackLayout>
+            <Label Text="Translator" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="White" 
+                   FontSize="36"/>
+                      <BoxView  Margin="35,0,35,0" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor = "White"/>
+                </StackLayout>
+        </Frame>
+  <Frame  BackgroundColor="#949494"  BorderColor="#ffffff" Margin="5,12,5,5" Padding="3,0,3,0" CornerRadius="10">
+            <StackLayout x:Name="stack1">
+<Picker x:Name="picker"  Title="English" TextColor="White" FontSize="Large"  Margin="0,0,240,0"/>
+                <Picker x:Name="picker2" FontSize="Large" Title="English" TextColor="White" Margin="240,-65,0,0"/> 
+                <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor = "#C4C4C4"/>
+  <Editor x:Name="SourceText"
+                    FontSize="Medium"
+                    Placeholder="Enter text"
+                    HeightRequest="180"
+                    PlaceholderColor="#bebebe"
+                    Keyboard="Text"/>
+  <Button 
+                    Text="Translate"
+                    BackgroundColor="#3f3f3f"
+                    TextColor="White"
+                    Margin="85,0,85,20"
+                    CornerRadius="10"
+                    Clicked="Translate_Tapped"
+                    />
+                              
+
+               
+</StackLayout>
+        </Frame>
+        <Frame  BackgroundColor="#949494"  BorderColor="#ffffff" Margin="5,10,5,3" Padding="3,0,3,3" CornerRadius="10">
+            <Editor Grid.Row="1"
+                    x:Name="TargetText"
+                    HeightRequest="310"
+
+                    Placeholder="Translation"
+                    PlaceholderColor="#bebebe"
+                    FontSize="Medium"
+                   Keyboard="Text"/>
+        </Frame>
+    </StackLayout>
+</ContentPage>
+
+
+
